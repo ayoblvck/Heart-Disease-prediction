@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ai-code-notebook</title>
+<title>Problem Definition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,8 +80,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem Definition</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Identifying heart diseases in a patient is usually complex and requires numerous laboratory tests. As a result, patients spend extra time, resources, and energy undergoing these tests. To improve the decision-making capabilities and health outcomes, the health care industry is increasingly seeking better and more informed decision-making capabilities</p>
+<section id="project-aims-and-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="project-aims-and-objectives">Project Aims and objectives</h2>
+<p>This project aims to train three machine learning models to accurately predict a patient has heart disease based on certain medical features, thereby augmenting, and supporting the treatment process by aiding early treatment through accurate prediction.</p>
+</section>
+<section id="dataset-selection" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-selection">Dataset selection</h2>
+<p>An open dataset known as the heart disease dataset from the Kaggle website was used for this project. The dataset is a combination of four different databases. The dataset has 72 attributes; however, only 14 attributes were selected as they are considered the most useful for predicting heart diseases in patients by scholars.</p>
+</section>
+<section id="data-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="data-distribution">Data distribution</h2>
+<p>In predicting or classifying a problem, the data distribution is critical. The dataset shows that heart disease occurred 54.46 percent of the time in the dataset, while no heart disease occurred 45.54 percent of the time. Therefore, it is essential to balance the dataset to avoid overfitting. This assists the model in determining which patterns in the dataset contribute to heart disease and which do not</p>
+</section>
+<section id="model-building" class="level2">
+<h2 class="anchored" data-anchor-id="model-building">Model Building</h2>
 <p>Importing Various dependencies</p>
 <div class="cell" data-execution_count="75">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
@@ -97,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, accuracy_score, confusion_matrix, classification_report</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Data loading and Processing</p>
+<p>Data Cleaning and Validation</p>
 <div class="cell" data-execution_count="76">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load heart disease data to panda dataframe</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>heart_disease <span class="op">=</span> pd.read_csv(<span class="st">"/Users/maryam/Desktop/heart 2.csv"</span>, na_values <span class="op">=</span> <span class="st">'?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1047,6 +1077,7 @@ weighted avg       0.95      0.95      0.95       205
 The person is predicted to not have heart disease</code></pre>
 </div>
 </div>
+</section>
 
 </main>
 <!-- /main column -->
