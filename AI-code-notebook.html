@@ -109,6 +109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data-distribution" class="level2">
 <h2 class="anchored" data-anchor-id="data-distribution">Data distribution</h2>
 <p>In predicting or classifying a problem, the data distribution is critical. The dataset shows that heart disease occurred 54.46 percent of the time in the dataset, while no heart disease occurred 45.54 percent of the time. Therefore, it is essential to balance the dataset to avoid overfitting. This assists the model in determining which patterns in the dataset contribute to heart disease and which do not</p>
+</section>
+<section id="model-building" class="level2">
+<h2 class="anchored" data-anchor-id="model-building">Model Building</h2>
 <p>Importing Various dependencies</p>
 <div class="cell" data-execution_count="75">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
@@ -124,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, accuracy_score, confusion_matrix, classification_report</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Data loading and Processing</p>
+<p>Data Cleaning and Validation</p>
 <div class="cell" data-execution_count="76">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load heart disease data to panda dataframe</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>heart_disease <span class="op">=</span> pd.read_csv(<span class="st">"/Users/maryam/Desktop/heart 2.csv"</span>, na_values <span class="op">=</span> <span class="st">'?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
